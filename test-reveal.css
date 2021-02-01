@@ -1,0 +1,40 @@
+.flex-container {
+    display: flex;
+}
+
+.flex-child {
+    flex: 1;
+    
+}  
+
+.flex-child:first-child {
+    margin-right: 40px;
+}
+
+.magenta {
+    border-radius: 5px;
+    height: 600px;
+}
+
+.green  {
+    border-radius: 5px;
+    height: 600px;
+    padding: 20px;
+}
+
+.reveal pre code {
+  overflow: visible;
+}
+
+.reveal section {
+
+  font-size: 0.60em !important;
+  text-align: left;
+  line-height: 120% !important
+}
+
+.margin{
+  padding: 20px;
+}
+
+.reveal section img { background:none; border:none; box-shadow:none; }
