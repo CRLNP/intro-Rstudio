@@ -103,6 +103,19 @@ knitr::opts_chunk$set(echo = FALSE)
 
 - Bref, complexe mais TRÈS puissant!
 
+
+## 2. Quelques bémols 
+
+### Stratégie d'attaque
+
+1. Choisir ses combats (on n'apprend pas R, on apprend ce que l'on a à faire dans R)
+
+2. Savoir trouver des réponses à ses questions
+
+
+![](markdown/better.png) 
+
+
 ## 3. R, RStudio et autres interfaces 
 
 - Interface du **R** de base pas très intuitive donc peu utilisée telle quelle  
