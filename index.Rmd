@@ -208,6 +208,37 @@ require(psych)
 
 - Voir [R for data science](https://r4ds.had.co.nz/index.html) de Grolemund & Wickham
 
+## 6. Packages Géo/Carto
+
+<div style="position: fixed; top: 0; right: 0;">
+![](markdown/Animated_Cartogram_Africa.gif)
+</div>
+
+<br>
+
+- [SF](https://r-spatial.github.io/sf/)   
+- [SP](https://www.rdocumentation.org/packages/sp/versions/1.4-5)   
+- [Raster](https://www.rdocumentation.org/packages/raster/versions/3.4-5)   
+- [Leaflet](https://rstudio.github.io/leaflet/)   
+- [Cartography](https://www.rdocumentation.org/packages/cartography/versions/2.4.2)   
+- [Tmap](https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html)   
+- [Mapview](https://r-spatial.github.io/mapview/)   
+- [RQGIS](https://www.rdocumentation.org/packages/RQGIS/versions/1.0.4)
+
+<br>
+
+[The R Graph Gallery](https://www.r-graph-gallery.com/)   
+[*Geocomputation with R*](https://geocompr.robinlovelace.net/)   
+[*Données géospatiales et cartographie avec R*](https://roelandtn.frama.io/slides/2090628_meetup_Raddict_datageo.html#1)   
+[*Spatial Data Science with applications in R*](https://keen-swartz-3146c4.netlify.app/)   
+[*CRAN Task View: Analysis of Spatial Data*](https://cran.r-project.org/web/views/Spatial.html)   
+[Making Maps with R](https://bookdown.org/nicohahn/making_maps_with_r5/docs/introduction.html)  [github](https://github.com/nicoFhahn/making_maps_with_r)
+
+
+![](markdown/carto.png)
+
+
+
 ## 7. Interface **RStudio**  
 
 <center>
@@ -697,7 +728,7 @@ describe(bd) # Description plus détaillée des variables du tableau
 - [frrrenchies](https://github.com/frrrenchies/frrrenchies/)
 - [Graphiques de base](http://pbil.univ-lyon1.fr/R/pdf/lang04.pdf)
 
-- [Catalogue Sofia -  Sujet: R Langage de programmation](https://umontreal.on.worldcat.org/search?databaseList=283,638&queryString=su:R%20(Langage%20de%20programmation)
+- [Catalogue Sofia -  Sujet: R Langage de programmation](https://umontreal.on.worldcat.org/search?databaseList=283,638&queryString=su:R%20(Langage%20de%20programmation))
 
 - [Rseek - Recherche Google dans ressources R seulement](http://www.rseek.org/)
 - [The R Manuals (Guides de base)](https://cran.r-project.org/manuals.html)
