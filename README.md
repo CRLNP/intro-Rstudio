@@ -4,6 +4,6 @@ Webinaire
 
 Caroline Patenaude
 
-Hiver 2021
+Automne 2025
 
 Bibliothèque des lettres et sciences humaines
