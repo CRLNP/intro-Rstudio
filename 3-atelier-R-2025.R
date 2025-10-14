@@ -1,9 +1,9 @@
 ############################################################
 #                                                          #                                      
-####       ----          IntroR            ----         ####
+####       ----          WebinaiR             ----      ####
 #           Script 3 - Les tests et graphiques             #
 #                   Caroline Patenaude                     #
-#                      27-02-2025                          # 
+#                      15-10-2025                          # 
 ############################################################
 
 
@@ -11,6 +11,7 @@
 
 install.packages("questionr", dep = TRUE)
 install.packages("ggplot2", dep = TRUE)
+install.packages("esquisse", dep = TRUE) # Addins
 
 library(questionr)
 library(ggplot2)
@@ -122,6 +123,7 @@ summary(mod.reg)
 # 1.   Fonctions natives
 # 2.   Fonctions GGplot2
 
+# NOTE à explorer, package esquisse qui fournit un addin graphique pour construire des graphiques ggplot (ggplot2 builder)
 
 #** ----- 6.1.  Quatre graphiques de base: plot(), hist(), boxplot(), barplot()  -----
 

@@ -1,9 +1,9 @@
 ############################################################
 #                                                          #                                      
-####       ----          IntroR            ----         ####
+####       ----          WebinaiR            ----       ####
 #         Script 1 - Objets et grammaire de base           #
 #                   Caroline Patenaude                     #
-#                      27-02-2025                          # 
+#                      15-10-2025                          # 
 ############################################################
 
 
@@ -30,11 +30,11 @@ library(Hmisc)
 library(leaflet)
 
 # ou require() qui peut être utilisé dans des commandes if()
-
+# R vient avec un bibliothèque standards de packages déjà chargés
 
 #* Pour télécharger des packages de Github ===================
 
-install.packages("devtools")
+install.packages("devtools") # permet entre autres de télécharger des packages en production sur github - faut au préalable installer Rtools
 library(devtools)
 install_github("hadley/dplyr") # nom du développeur et du package
 
@@ -48,7 +48,7 @@ installed.packages()
 search()
 
 # Lister les fonctions d'un module chargé
-library(help = questionr)
+library(help = NomModule)
 
 # Détacher un module chargé
 detach(package:NomModule)   # pour éviter les conflits entre fonctions du même nom de différents modules
@@ -63,9 +63,9 @@ find("NomFonction")
 update.packages()
 
 # Utiliser ponctuellement une fonction d'un module non chargé et désambiguiser différentes fonctions du même nom
-psych::describe(bd$age)
-questionr::describe(bd$age)
-Hmisc::describe(bd$age)
+psych::describe(NomObjet)
+questionr::describe(NomObjet)
+Hmisc::describe(NomObjet)
 
 
 #*   Gérer son environnement de travail  ===================
@@ -96,7 +96,7 @@ help.start()
 
 ## Trouver de l'aide sur une fonction - module doit être chargé, sinon ajouter l'argument "try.all.packages = TRUE"
 ?NomFonction
-help(NomFonction) 
+help(describe) 
 
 # Note: pour afficher l'aide hors console en format html: help(t.test, help_type="html")
 
@@ -107,6 +107,7 @@ help.search("correlation")
 ## Trouver de l'aide sur un package
 help(package = questionr)
 
+# Consulter les cheat sheets (Help -> Cheat Sheets : https://posit.co/resources/cheatsheets/
 
 ## Exécuter les examples d'une fonction
 example(NomFonction)
@@ -116,6 +117,7 @@ example(NomFonction)
 
 
 # ==================== 2. LES OBJETS ====================
+
 
 # R comme une grosse calculatrice
 2+2
@@ -208,7 +210,8 @@ cc <- TRUE     # Logique (T/F)
 dd <- NA       # Logique
 ee <- "123"    # ???
 
-mode()
+mode(bb) # ou class()
+
 
 # ==================== 7.  LES TYPES D'OBJETS ====================
 
@@ -261,6 +264,7 @@ mode(poids)
 # Possible de nommer les éléments d'un vecteur. Reste un vecteur numérique régulier avec un attribut "names" (différent des labels de facteurs).  
 poids <- c(Caroline = 70, Nathalie = 65, Marie = 60) 
 
+# Pour enlever les noms: poids <- unname(poids) 
 
 #* 7.2. Facteurs ========================================
 
@@ -268,8 +272,8 @@ poids <- c(Caroline = 70, Nathalie = 65, Marie = 60)
 # On créé des facteurs avec la fonction factor()
 # Les modalités de la variable correspondent à des "niveaux" (*levels*) uniques et fixes, ie impossible d’assigner une valeur qui n’a pas été préalablement définie comme une des modalités.
 # Des étiquettes (*labels*) peuvent être associées aux niveaux.
-# L'argument optionnel levels() permet d'ajouter et modifier les catégories prédéfinies 
 # L'argument labels(), aussi optionnel, permet de définir les libellés associés aux niveaux. Faut respecter leur ordre
+# L'argument optionnel levels() permet d'ajouter et modifier les catégories prédéfinies 
 # Lors de l’importation de données, tout dépendant de la fonction d'importation, les variables qualitatives seront importées sous forme de *vecteur textuel* ou de *facteur*.
 
 
@@ -299,3 +303,4 @@ bd <- data.frame(age, sexe, poids)
 
 bd
 str(bd)
+attributes(bd)

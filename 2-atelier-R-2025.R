@@ -1,9 +1,9 @@
 ############################################################
 #                                                          #                                      
-####       ----          IntroR            ----         ####
+####       ----          WebinaiR             ----      ####
 #     Script 2 - Exploration et manipulation d'une BD      #
 #                   Caroline Patenaude                     #
-#                      27-02-2025                          # 
+#                      15-10-2025                          # 
 ############################################################
 
 
@@ -55,6 +55,7 @@ read_spss("fichier.sav", user_na = TRUE)
 # Plusieurs autres fonctions disponibles dans haven: read_sav, read_dta, read_sas, read_csv, read_csv2, ...
 
 # ATTENTION: le traitement des étiquettes de valeurs (SPSS...) ne correspond pas au fonctionnement de base de R. Il faut utiliser des packages qui prévoient l'utilisation de données labellisées (voir cheat sheet labelled)
+# https://raw.githubusercontent.com/rstudio/cheatsheets/main/labelled.pdf
 
 
 #* 1.2. Les bases de données intégrées aux modules   ====================
@@ -123,6 +124,8 @@ dim(bd) # nombre de dimensions (colonnes et lignes)
 class(bd)  # type d'objet
 
 str(bd)    # description plus détaillée de la structure du tableau (aussi en cliquant sur objet dans l'environnement - permet de connaitre la structure de tout type d'objet)
+
+attributes(bd) # pour lister les caractéristiques d'un dataframe
 
 describe(bd) # Module questionr - description plus détaillée des variables du tableau
 
@@ -269,7 +272,7 @@ is.na(bd$age)
 which(is.na(bd), arr.ind=TRUE) # Identifier les cas qui ont une valeur manquante dans le jeu de données complet
 
 # is.na()  applique test logique
-# which()  retourne les numéros de lignes qui remplissent la condition (TRUE)
+# which()  retourne la position des éléments, ie les numéros de lignes qui remplissent la condition (TRUE)
 # arr.ind= permet d'appliquer le principe sur toutes les colonnes
 # Retourne une matrice composée du numéro de l'observation et du numéro de colonne où se trouve les NA
 # Pour identifier les cas d'une variable spécifique is.na(bd$occup)
@@ -572,7 +575,7 @@ cprop(tb, percent = TRUE)    # % en colonnes
 ## Argument percent pour afficher les %
 
 rprop(tb, percent = TRUE, digits = 0)    # % en lignes
-)
+
 ## Argument digits pour arrondir
 
 
@@ -596,6 +599,8 @@ tapply(bd$relig, bd$sexe, freq)
 #On indique le nom du tableau après la virgule.
 
 xtabs (~ sexe + occup, bd)
+
+# NOTE pour des tableaux mieux formattés: package gtsummary - résultats sont mis en forme dans le viewer et non dans la console
 
 # --------------------------- FIN DE SESSION -------------------------------
 
