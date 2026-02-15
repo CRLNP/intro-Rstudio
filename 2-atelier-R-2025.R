@@ -540,6 +540,8 @@ freq(bd$qualif, cum = TRUE, total = TRUE, sort = "inc", digits = 0, exclude = NA
 
 #** ----- 4.5. Tableaux croisées -----
 
+# Les tables sont généralement présentées dans la console dans un format brut 
+# Pour un format de présentation, plusieurs packages sont disponibles comme gtsummary, flextable, ... 
 
 # Fonction table() et cie.
 
